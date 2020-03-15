@@ -10,7 +10,7 @@ export interface ApiConfig {
   prefixPath: string;
 }
 
-const getConfig = (): ApplicationConfig => {
+export const getConfig = (): ApplicationConfig => {
   console.log('NODE_ENV');
   console.log(process.env.NODE_ENV);
   return DevConfig;

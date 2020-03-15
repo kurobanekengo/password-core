@@ -10,7 +10,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
-    //"declaration": true,
+    "declaration": true,
     "paths": {
       "@api/*": ["lib/api/*"],
       "@model/*": ["lib/model/*"],
