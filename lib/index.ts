@@ -1,1 +1,1 @@
-export * from "@config/applicationConfig";
+export const X = 100;
