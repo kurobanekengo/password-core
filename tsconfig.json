@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    //"allowJs": true,
     "outDir": "./dist",
     "baseUrl": "./",
     "lib": ["es5", "es6"],
@@ -9,11 +10,11 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
-    "declaration": true,
+    //"declaration": true,
     "paths": {
-      "@server/*": ["source/server/*", "build/server/*"],
-      "@api/*": ["source/api/*", "build/api/*"],
-      "@model/*": ["source/model/*", "build/model/*"]
+      "@api/*": ["lib/api/*"],
+      "@model/*": ["lib/model/*"],
+      "@config/*": ["lib/config/*"]
     }
   },
   "exclude": [
