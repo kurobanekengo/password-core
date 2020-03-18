@@ -1,20 +1,7 @@
-import axios from 'axios';
-import {ApiDeclaration, ApiMethod, declareApi} from "@api/apiDescriptor";
+import {apiMethod, declareApi} from "@api/apiDescriptor";
 import {Void} from "@model/void";
 import {PasswordEntity} from "@entity/passwordEntity";
 
 export const ApiDeclarations = {
-  getPasswords: declareApi<Void, PasswordEntity[], 1>(ApiMethod.GET, "passwords")
-};
-
-export type ApiClient<REQUEST, RESPONSE, VERSION> = (req: REQUEST, ver: VERSION) => Promise<RESPONSE>;
-
-const createApiClient = <REQ, RES, VERSION>(desc: ApiDeclaration<REQ, RES, VERSION>): ApiClient<REQ, RES, VERSION> => {
-  return (req, ver) => {
-    const apiPath = `http://${desc.resourceName}`;
-    return axios.get<REQ>("")
-      .then((res: any) => {
-        return res;
-      });
-  }
+  getPasswords: declareApi<Void, PasswordEntity[], 1>(apiMethod.GET, "passwords")
 };
