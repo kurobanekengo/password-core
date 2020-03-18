@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {ApiDeclaration, ApiMethod, declareApi} from "./apiDescriptor";
+import {ApiDeclaration, ApiMethod, declareApi} from "@api/apiDescriptor";
 
 export const ApiDeclarations = {
   getPasswords: declareApi<string, string, 1>(ApiMethod.GET, "passwords")
@@ -16,6 +16,3 @@ const createApiClient = <REQ, RES, VERSION>(desc: ApiDeclaration<REQ, RES, VERSI
       });
   }
 };
-
-const foo = createApiClient(ApiDeclarations.getPasswords);
-foo("", 1);

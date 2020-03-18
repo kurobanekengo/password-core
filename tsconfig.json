@@ -12,10 +12,11 @@
     "sourceMap": true,
     "declaration": true,
     "paths": {
-      "@api/*": ["lib/api/*"],
-      "@model/*": ["lib/model/*"],
-      "@config/*": ["lib/config/*"]
-    }
+      "@api/*": ["source/api/*"],
+      "@model/*": ["source/model/*"],
+      "@config/*": ["source/config/*"]
+    },
+    "plugins": [{ "transform": "@zerollup/ts-transform-paths" }]
   },
   "exclude": [
     "node_modules"

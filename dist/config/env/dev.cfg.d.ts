@@ -1,2 +1,2 @@
-import { ApplicationConfig } from "@config/applicationConfig";
+import { ApplicationConfig } from "../applicationConfig";
 export declare const DevConfig: Readonly<ApplicationConfig>;

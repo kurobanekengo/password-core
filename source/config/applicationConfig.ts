@@ -11,7 +11,5 @@ export interface ApiConfig {
 }
 
 export const getConfig = (): ApplicationConfig => {
-  console.log('NODE_ENV');
-  console.log(process.env.NODE_ENV);
   return DevConfig;
 };
