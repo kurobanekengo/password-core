@@ -1,8 +1,10 @@
 import axios from 'axios';
 import {ApiDeclaration, ApiMethod, declareApi} from "@api/apiDescriptor";
+import {Void} from "@model/void";
+import {PasswordEntity} from "@entity/passwordEntity";
 
 export const ApiDeclarations = {
-  getPasswords: declareApi<string, string, 1>(ApiMethod.GET, "passwords")
+  getPasswords: declareApi<Void, PasswordEntity[], 1>(ApiMethod.GET, "passwords")
 };
 
 export type ApiClient<REQUEST, RESPONSE, VERSION> = (req: REQUEST, ver: VERSION) => Promise<RESPONSE>;

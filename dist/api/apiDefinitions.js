@@ -14,6 +14,4 @@ const createApiClient = (desc) => {
         });
     };
 };
-const foo = createApiClient(exports.ApiDeclarations.getPasswords);
-foo("", 1);
 //# sourceMappingURL=apiDefinitions.js.map
