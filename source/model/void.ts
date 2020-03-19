@@ -1,2 +1,2 @@
-export interface Void {}
-export const VOID: Void = {};
+export type Void = typeof VOID;
+export const VOID = Symbol("VOID");
