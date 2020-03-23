@@ -5,6 +5,9 @@ const devConfig: ApplicationConfig = {
     host: "192.168.33.12",
     port: 3000,
     prefixPath: "api"
+  },
+  storage: {
+    path: "/home/vagrant/shared/data"
   }
 };
 

@@ -2,6 +2,9 @@ import {DevConfig} from "@config/env/dev.cfg";
 
 export interface ApplicationConfig {
   api: ApiConfig;
+  storage: {
+    path: string;
+  }
 }
 
 export interface ApiConfig {
