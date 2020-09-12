@@ -28,3 +28,8 @@ $ ./node_modules/.bin/ttsc
 ```
 
 `ttsc`は`ttypescript`のインストールにより使用できるようになる。
+
+## 単体実行
+```
+$ ./node_modules/.bin/ts-node ファイル名
+```
