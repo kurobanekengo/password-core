@@ -33,3 +33,8 @@ $ ./node_modules/.bin/ttsc
 ```
 $ ./node_modules/.bin/ts-node ファイル名
 ```
+
+## テスト実行
+```
+$ npm run test
+```
