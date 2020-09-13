@@ -1,5 +1,3 @@
-import { CategoryEntity } from "@entity/categoryEntity";
-import { isString } from "util";
 import { JsonTypeConverter } from "./jsonTypeConverter";
 
 interface ValidatorMapping {
@@ -62,16 +60,3 @@ export class DefaultJsonTypeConverter<T> implements JsonTypeConverter<T>{
     return true;
   }
 }
-
-const aaa = DefaultJsonTypeConverter
-.getInstance<CategoryEntity>()
-.has('id', isString)
-.has('name', isString)
-.has('description', isString)
-;
-
-console.log(aaa.canBe({
-  id: '',
-  name: '',
-  description:''
-}));
