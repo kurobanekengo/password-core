@@ -3,3 +3,4 @@ export interface CategoryEntity {
     name: string;
     description: string;
 }
+export declare const isCategory: (json: unknown) => json is CategoryEntity;
