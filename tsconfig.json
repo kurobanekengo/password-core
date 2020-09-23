@@ -10,6 +10,8 @@
     "experimentalDecorators": true,
     "sourceMap": true,
     "declaration": true,
+    "strictNullChecks": true,
+    "alwaysStrict": true,
     "paths": {
       "@api/*": ["source/api/*"],
       "@model/*": ["source/model/*"],
