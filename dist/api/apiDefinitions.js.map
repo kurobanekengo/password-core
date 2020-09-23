@@ -1,1 +1,0 @@
-{"version":3,"file":"apiDefinitions.js","sourceRoot":"","sources":["../../source/api/apiDefinitions.ts"],"names":[],"mappings":";;AAAA,mDAAyD;AAM5C,QAAA,eAAe,GAAG;IAC7B,YAAY,EAAE,0BAAU,CAA4B,yBAAS,CAAC,GAAG,EAAE,WAAW,CAAC;IAC/E,aAAa,EAAE,0BAAU,CAA4B,yBAAS,CAAC,GAAG,EAAE,YAAY,CAAC;IACjF,YAAY,EAAE,0BAAU,CAAqB,yBAAS,CAAC,GAAG,EAAE,WAAW,CAAC;CACzE,CAAC"}
