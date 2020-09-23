@@ -1,3 +1,7 @@
+export  class Id<T extends string> {
+  private IDENTITY: T;
+}
+
 export class Void {
   private constructor() {}
   private static _instance = new Void();

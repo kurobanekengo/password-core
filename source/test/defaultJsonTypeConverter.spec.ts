@@ -1,9 +1,9 @@
 import { expect } from 'chai';
-import { isCategory } from '@entity/categoryEntity';
+import { CategoryEntity } from '@entity/categoryEntity';
 
 describe('JSON型変換(正常系)', () => {
   it("{id: '', name: '', description: ''}", () => {
-    expect(isCategory({
+    expect(CategoryEntity.isCategory({
       id: '',
       name: '',
       description: ''
@@ -14,14 +14,14 @@ describe('JSON型変換(正常系)', () => {
 describe('JSON型変換(異常系)', () => {
 
   it("項目不足: {id: '', name: ''}", () => {
-    expect(isCategory({
+    expect(CategoryEntity.isCategory({
       id: '',
       name: ''
     })).to.equal(false)
   });
 
   it("項目過多: {id: '', name: '', description: '', xxx: ''}", () => {
-    expect(isCategory({
+    expect(CategoryEntity.isCategory({
       id: '',
       name: '',
       description: '',
@@ -30,7 +30,7 @@ describe('JSON型変換(異常系)', () => {
   });
 
   it("empty: {id: '', name: '', description: undefined}", () => {
-    expect(isCategory({
+    expect(CategoryEntity.isCategory({
       id: '',
       name: '',
       description: undefined
@@ -38,7 +38,7 @@ describe('JSON型変換(異常系)', () => {
   });
 
   it("型エラー: {id: '', name: '', description: 5}", () => {
-    expect(isCategory({
+    expect(CategoryEntity.isCategory({
       id: '',
       name: '',
       description: 5
