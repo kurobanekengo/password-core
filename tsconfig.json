@@ -16,7 +16,8 @@
       "@api/*": ["source/api/*"],
       "@model/*": ["source/model/*"],
       "@entity/*": ["source/entity/*"],
-      "@config/*": ["source/config/*"]
+      "@config/*": ["source/config/*"],
+      "@converter/*": ["source/converter/*"]
     },
     "plugins": [{ "transform": "@zerollup/ts-transform-paths" }]
   },

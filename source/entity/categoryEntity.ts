@@ -1,6 +1,6 @@
 import { isString } from "util";
 import { Id } from "@model/common";
-import { DefaultJsonTypeConverter } from "source/converter/jsonTypeConverter/defaultJsonTypeConverter";
+import { DefaultJsonTypeConverter } from "@converter/jsonTypeConverter/defaultJsonTypeConverter";
 
 export type CategoryId = Id<"CategoryEntity"> & string;
 export const CategoryId = (id: string): CategoryId  => id as CategoryId;
