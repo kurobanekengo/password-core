@@ -9,3 +9,9 @@ export const ApiMethod = {
 };
 
 export type ApiCall<REQUEST, RESPONSE> = (req: REQUEST) => RESPONSE;
+export interface ApiRequest<T> {
+  data: T;
+}
+export interface ApiResponse<T> {
+  data: T;
+}
