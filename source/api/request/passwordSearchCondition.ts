@@ -1,5 +1,5 @@
 import { CategoryId } from "@entity/categoryEntity";
-import { DefaultJsonTypeConverter } from "dist/converter/jsonTypeConverter/defaultJsonTypeConverter";
+import { DefaultJsonTypeConverter } from "source/converter/jsonTypeConverter/defaultJsonTypeConverter";
 import { isString } from "util";
 
 export interface PasswordSearchCondition {
