@@ -5,6 +5,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "check": "tsc --noEmit",
     "build": "rimraf dist; ttsc",
     "test": "ts-mocha --paths -p tsconfig.json source/test/**/*.spec.ts"
   },
