@@ -29,7 +29,7 @@ export class DefaultJsonTypeConverter<T> implements JsonTypeConverter<T>{
       return this;
   }
 
-  canBe(obj: unknown): obj is T {
+  canBe(obj: any): obj is T {
     // 登録してない名称が来た場合キャスト不可とする
     // 対象外のものを含んでいても通して良いという考え方もあるが一旦この仕様で進めて様子を見る。
     const objKeys = Object.keys(obj);
