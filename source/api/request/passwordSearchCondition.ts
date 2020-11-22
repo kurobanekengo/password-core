@@ -3,8 +3,8 @@ import { CategoryId } from "@entity/categoryEntity";
 import { isString } from "util";
 
 export interface PasswordSearchCondition {
-  keyword: string;
-  categoryId: CategoryId
+  keyword?: string;
+  categoryId?: CategoryId
 }
 
 const converter = DefaultJsonTypeConverter
