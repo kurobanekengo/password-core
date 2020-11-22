@@ -2,8 +2,8 @@ import {ApplicationConfig} from "@config/applicationConfig";
 
 const devConfig: ApplicationConfig = {
   api: {
-    host: "192.168.33.12",
-    port: 3000,
+    host: "127.0.0.1",
+    port: 8000,
     prefixPath: "api"
   },
   storage: {
