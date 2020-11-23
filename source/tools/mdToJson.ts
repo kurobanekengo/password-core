@@ -23,6 +23,7 @@ const main = async () => {
   let ignore = false;
   let header = false;
   let headers: any[] = [];
+  let categoryId = 0;
   for await (const l of rl) {
     if (ignore) {
       ignore = false;  
@@ -38,16 +39,24 @@ const main = async () => {
       ignore = true;  
       const columns = line.split("|");
       headers = getColumns(columns);
+      current.headers = headers.map((h, i) => {
+        const header = {
+            [`column${i+1}`]: h
+        }
+        return header;
+      });
       continue;
     }
     const char = line[0];
     if (char === "#") {
+      categoryId++;  
       header = true;  
       current = {};
       product.push(current);
-      const comment = line.substr(1);
+      const category = line.substr(1);
       data = [];
-      current.comment = comment;
+      current.categoryId = new String(categoryId);
+      current.categoryName = category;
       current.data = data;
       continue;
     }
@@ -58,10 +67,10 @@ const main = async () => {
     for (let i = 0; i < columns.length; i++) {
       const key = headers[i];  
       const value = columns[i];
-      item[key] = value;
+      item[`column${i+1}`] = value;
     }
   }
-  console.log(JSON.stringify(product));
+  console.log(JSON.stringify(product, null, "  "));
 };
 
 main();
