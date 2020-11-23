@@ -7,7 +7,7 @@ const devConfig: ApplicationConfig = {
     prefixPath: "api"
   },
   storage: {
-    path: "/home/vagrant/shared/data"
+    path: "/Users/developer/Data/password/password.md"
   }
 };
 
