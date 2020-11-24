@@ -7,7 +7,8 @@ const devConfig: ApplicationConfig = {
     prefixPath: "api"
   },
   storage: {
-    path: "/Users/developer/Data/password/password.md"
+    path: "/Users/developer/Data/password",
+    fileName: "password.md",
   }
 };
 

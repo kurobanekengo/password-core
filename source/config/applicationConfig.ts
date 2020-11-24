@@ -4,6 +4,7 @@ export interface ApplicationConfig {
   api: ApiConfig;
   storage: {
     path: string;
+    fileName: string;
   }
 }
 

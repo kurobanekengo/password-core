@@ -1,9 +1,6 @@
 import * as fs from "fs";
 import * as readline from "readline";
 import { getConfig } from "@config/applicationConfig"; 
-export const mdToJson = (filePath: string) => {
-
-};
 
 const getColumns = (line: any[]): any[] => {
   line = line.slice(1, line.length - 1);  
@@ -11,10 +8,8 @@ const getColumns = (line: any[]): any[] => {
   return line;
 };
 
-const main = async () => {
-  const config = getConfig();
-  const filePath = config.storage.path;
-  const stream = fs.createReadStream(filePath)
+const mdToJson = async (file: string) => {
+  const stream = fs.createReadStream(file)
   const rl = readline.createInterface({input: stream});
   let i = 1;
   const product: any[] = [];
@@ -72,5 +67,12 @@ const main = async () => {
   }
   console.log(JSON.stringify(product, null, "  "));
 };
+
+const main = () => {
+    const config = getConfig();
+    const filePath = config.storage.path;
+    const fileName = config.storage.fileName;
+    mdToJson(`${filePath}/${fileName}`);
+  };
 
 main();
